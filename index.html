@@ -5,13 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Brady - Chief Information Officer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav" id="stickyNav">
+        <div class="nav-inner">
+            <span class="nav-brand">MB</span>
+            <div class="nav-links">
+                <a href="#summary">Summary</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#career">Career</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+            </div>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- Header Section -->
-        <header class="header">
+        <!-- Header / Hero Section -->
+        <header class="header" id="hero">
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
             <div class="header-content">
                 <div class="profile-section">
                     <div class="profile-image">
@@ -40,13 +65,32 @@
                         <a href="https://linkedin.com/in/michaelrbrady" target="_blank">michaelrbrady</a>
                     </div>
                 </div>
+                <!-- Stats Row -->
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Years Leading IT</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="9">0</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="200">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Staff Managed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-prefix">$</span><span class="stat-number" data-target="30">0</span><span class="stat-suffix">M</span>
+                        <span class="stat-label">Budget</span>
+                    </div>
+                </div>
             </div>
         </header>
 
         <!-- Main Content -->
         <main class="main-content">
             <!-- Executive Summary -->
-            <section class="section">
+            <section class="section" id="summary">
                 <h3 class="section-title">
                     <i class="fas fa-user-tie"></i>
                     Executive Summary
@@ -57,49 +101,49 @@
             </section>
 
             <!-- Key Achievements -->
-            <section class="section">
+            <section class="section" id="achievements">
                 <h3 class="section-title">
                     <i class="fas fa-trophy"></i>
                     Key Achievements
                 </h3>
                 <div class="achievements-grid">
                     <div class="achievement-card">
-                        <div class="achievement-icon">
+                        <div class="achievement-icon icon-ai">
                             <i class="fas fa-robot"></i>
                         </div>
                         <h4>AI & ML Innovation</h4>
                         <p>Built UnFranchise Copilot, an agentic AI that drives sales, customer conversions, and business analytics. Integrated AI-powered recommendation engines across eCommerce product pages.</p>
                     </div>
                     <div class="achievement-card">
-                        <div class="achievement-icon">
+                        <div class="achievement-icon icon-global">
                             <i class="fas fa-globe"></i>
                         </div>
                         <h4>Global Transformation</h4>
                         <p>Consolidated and modernized 10+ international eCommerce platforms (SHOP.COM, MarketAmerica.com, MotivesCosmetics.com, Isotonix.com, etc.) with multilingual/multi-currency support.</p>
                     </div>
                     <div class="achievement-card">
-                        <div class="achievement-icon">
+                        <div class="achievement-icon icon-cloud">
                             <i class="fas fa-cloud"></i>
                         </div>
                         <h4>Cloud & Infrastructure</h4>
                         <p>Migrated ERP, warehouse, and legacy systems to cloud (AWS/Azure), cutting TCO by 80% while achieving 99.999% uptime.</p>
                     </div>
                     <div class="achievement-card">
-                        <div class="achievement-icon">
+                        <div class="achievement-icon icon-data">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h4>Data & Analytics</h4>
                         <p>Deployed Big Data platform across 8 countries, leveraging Tableau & Power BI for real-time insights.</p>
                     </div>
                     <div class="achievement-card">
-                        <div class="achievement-icon">
+                        <div class="achievement-icon icon-devops">
                             <i class="fas fa-cogs"></i>
                         </div>
                         <h4>DevOps Modernization</h4>
                         <p>Transitioned from monolithic to microservices/containers (OpenShift), CI/CD pipelines, improving release velocity by 45%.</p>
                     </div>
                     <div class="achievement-card">
-                        <div class="achievement-icon">
+                        <div class="achievement-icon icon-cost">
                             <i class="fas fa-dollar-sign"></i>
                         </div>
                         <h4>Cost & Efficiency</h4>
@@ -109,7 +153,7 @@
             </section>
 
             <!-- Career Highlights -->
-            <section class="section">
+            <section class="section" id="career">
                 <h3 class="section-title">
                     <i class="fas fa-briefcase"></i>
                     Career Highlights
@@ -143,7 +187,7 @@
             </section>
 
             <!-- Technical Leadership -->
-            <section class="section">
+            <section class="section" id="skills">
                 <h3 class="section-title">
                     <i class="fas fa-code"></i>
                     Technical Leadership
@@ -189,7 +233,7 @@
             </section>
 
             <!-- Education & Engagement -->
-            <section class="section">
+            <section class="section" id="education">
                 <h3 class="section-title">
                     <i class="fas fa-graduation-cap"></i>
                     Education & Engagement
