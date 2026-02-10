@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
         notification.textContent = message;
         notification.style.cssText =
             'position:absolute;top:-30px;left:50%;transform:translateX(-50%);' +
-            'background:var(--color-blue);color:white;padding:4px 10px;' +
+            'background:var(--color-accent);color:white;padding:4px 10px;' +
             'border-radius:6px;font-size:12px;z-index:1000;opacity:0;' +
             'transition:opacity 0.3s ease;pointer-events:none;';
 
