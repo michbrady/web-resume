@@ -392,6 +392,12 @@ body {
     background: rgba(255, 255, 255, 0.08);
 }
 
+.stat-value {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+}
+
 .stat-number,
 .stat-prefix,
 .stat-suffix {
